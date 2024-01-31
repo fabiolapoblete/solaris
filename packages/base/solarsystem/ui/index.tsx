@@ -1,16 +1,27 @@
-export const SolarSystem = () => {
-  const url =
-    'https://github.com/fabiolapoblete/solaris/blob/main/packages/base/solarsystem/data/data.json';
+import './style.scss';
 
-  async function fetchSolarData() {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error('error fetching json data', error);
+import { useEffect, useState } from 'react';
+import { useData, SolarDataItem } from '@solaris/solarsystem';
+import { SolarBody } from '@solaris/solar-body';
+
+export const SolarSystem = () => {
+  const { fetchSolarData } = useData();
+  const [solarData, setSolarData] = useState<SolarDataItem[]>([]);
+
+  useEffect(() => {
+    async function getSolarData(): Promise<void> {
+      const data: SolarDataItem[] = await fetchSolarData();
+      setSolarData(data);
     }
-  }
-  fetchSolarData();
-  return <section>yo</section>;
+    getSolarData();
+  }, []);
+
+  return (
+    <section className='solar-system'>
+      {solarData &&
+        solarData.map((solarObj) => (
+          <SolarBody key={solarObj.id} solarObj={solarObj} />
+        ))}
+    </section>
+  );
 };

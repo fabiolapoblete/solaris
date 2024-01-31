@@ -1,0 +1,63 @@
+@use '@solaris/styles' as *;
+
+.solar-body {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Gör variabler av boxshadow och color
+
+.Sun {
+  background-color: #ffd029;
+  margin-left: -700px;
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+}
+
+.Mercury {
+  background-color: #888888;
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Venus {
+  background-color: #e7cdcd;
+
+  box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Earth {
+  background-color: #428ed4;
+
+  box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.Mars {
+  background-color: #ef5f5f;
+
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.Jupiter {
+  background-color: #e29468;
+
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+}
+
+.Saturn {
+  background-color: #c7aa72;
+
+  box-shadow: inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+}
+
+.Uranus {
+  background-color: #c9d4f1;
+
+  box-shadow: inset -15px -15px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Neptune {
+  background-color: #7a91a7;
+
+  box-shadow: inset -10px -10px 15px rgba(0, 0, 0, 0.5);
+}
