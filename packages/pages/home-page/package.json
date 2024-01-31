@@ -1,0 +1,4 @@
+{
+  "name": "@solaris/home-page",
+  "main": "./index.ts"
+}

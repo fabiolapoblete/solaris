@@ -1,0 +1,30 @@
+@use '@solaris/styles' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  scroll-behavior: smooth;
+
+  .App {
+    .large-header {
+      @include large-header;
+    }
+
+    .sub-header {
+      @include sub-header;
+    }
+
+    .small-header {
+      @include small-header;
+    }
+
+    .text {
+      @include text;
+    }
+  }
+}

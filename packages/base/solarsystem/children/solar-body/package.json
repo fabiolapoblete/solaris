@@ -1,0 +1,4 @@
+{
+  "name": "@solaris/solar-body",
+  "main": "./index.ts"
+}

@@ -1,0 +1,201 @@
+[
+  {
+    "id": 0,
+    "type": "star",
+    "name": "Sun",
+    "latinName": "Solis",
+    "rotation": 83950000000,
+    "circumference": 4379000,
+    "temp": {
+      "day": 6000,
+      "night": 6000
+    },
+    "distance": 0,
+    "orbitalPeriod": 0,
+    "desc": "The Sun is the star at the center of the solar system, around which the other parts of the solar system orbit. Its large mass of 332,830 Earth masses gives it a density in its core high enough to sustain fusion. Fusion releases enormous amounts of energy into space through electromagnetic radiation, such as visible light.",
+    "moons": []
+  },
+  {
+    "id": 1,
+    "type": "planet",
+    "name": "Mercury",
+    "latinName": "Mercurialis",
+    "rotation": 58,
+    "circumference": 15329,
+    "temp": {
+      "day": 430,
+      "night": -173
+    },
+    "distance": 57910000,
+    "orbitalPeriod": 88,
+    "desc": "Mercury is the planet closest to the Sun and is the smallest planet (0.055 Earth masses). Mercury has no natural satellites, and its only known geological structures, apart from impact craters, are hills, cliffs, and valleys likely formed during its early history. Mercury's almost negligible atmosphere consists of atoms blown there from the Sun by the solar wind. The relatively large iron core and thin mantle have not been explained, but the primary hypothesis is that the outer layers were stripped away from the planet in a massive collision with another celestial object.",
+    "moons": []
+  },
+  {
+    "id": 2,
+    "type": "planet",
+    "name": "Venus",
+    "latinName": "Venus",
+    "rotation": 116,
+    "circumference": 38025,
+    "temp": {
+      "day": 430,
+      "night": -173
+    },
+    "distance": 10820000,
+    "orbitalPeriod": 225,
+    "desc": "Venus is almost the same size as Earth (0.815 Earth masses). Venus is also in many other ways similar to Earth, as it has a thick silicate mantle around an iron core, a significant atmosphere, and likely geological activity. However, there are significant differences; Venus is much drier than Earth, and its atmosphere is almost 90 times denser. Venus has no natural satellites and is the hottest planet in the solar system with a surface temperature of over 400 °C. The high temperature is mainly due to the amount of greenhouse gases, primarily carbon dioxide, in the atmosphere. There is no definitive evidence that Venus is currently geologically active, but it lacks a magnetic field that would prevent the atmosphere from escaping into space. This may indicate that the atmosphere is regularly replenished by volcanic eruptions. The atmosphere is very thick and consists mostly of carbon dioxide. Venus is also known as the Evening Star or Morning Star because, depending on its phase, it can be seen from Earth with the naked eye either in the evening or morning. Between phases, Venus comes too close to the Sun and cannot be seen from Earth.",
+    "moons": []
+  },
+  {
+    "id": 3,
+    "type": "planet",
+    "name": "Earth",
+    "latinName": "Tellus",
+    "rotation": 1,
+    "circumference": 40075,
+    "temp": {
+      "day": 30,
+      "night": -10
+    },
+    "distance": 149600000,
+    "orbitalPeriod": 365,
+    "desc": "Earth is the largest and most compact of the inner planets. Earth is the only planet confirmed to have geological activity and is also the only planet known to support life. Its fluid hydrosphere is unique among the rocky planets, and Earth is also the only planet where plate tectonics have been observed. The Earth's atmosphere differs significantly from those of other planets, explained by the presence of living organisms that have changed the atmosphere to contain free oxygen, currently around 21 percent.",
+    "moons": ["Moon"]
+  },
+  {
+    "id": 4,
+    "type": "planet",
+    "name": "Mars",
+    "latinName": "Mars",
+    "rotation": 1,
+    "circumference": 21344,
+    "temp": {
+      "day": -60,
+      "night": -140
+    },
+    "distance": 55758006,
+    "orbitalPeriod": 687,
+    "desc": "Mars is the fourth planet from the Sun and the solar system's second smallest planet. It is named after the Roman god of war, Mars, and is sometimes called the \"Red Planet\" because of its reddish appearance. The red color is due to large amounts of iron oxide distributed over the surface and in the atmosphere.",
+    "moons": ["Phobos", "Deimos"]
+  },
+  {
+    "id": 5,
+    "type": "planet",
+    "name": "Jupiter",
+    "latinName": "Lovis",
+    "rotation": 0.4,
+    "circumference": 439264,
+    "temp": {
+      "day": -140,
+      "night": -140
+    },
+    "distance": 750290000,
+    "orbitalPeriod": 4324,
+    "desc": "Jupiter is the fifth planet from the Sun and is by far the largest planet in the solar system. Its mass is 2.5 times that of all the other planets combined. The planet is a gas giant, and it is not certain if it even has a solid core.",
+    "moons": ["Europa", "Ganymedes", "Io", "Callisto", "Amalthea", "Himalia"]
+  },
+  {
+    "id": 6,
+    "type": "planet",
+    "name": "Saturn",
+    "latinName": "Saturnus",
+    "rotation": 0.4,
+    "circumference": 378675,
+    "temp": {
+      "day": -178,
+      "night": -178
+    },
+    "distance": 1400000000,
+    "orbitalPeriod": 10585,
+    "desc": "Saturn is the sixth planet from the Sun and the second-largest in the solar system. It is a gas giant, known since ancient times. Galileo Galilei was the first to observe it through a telescope in 1610.",
+    "moons": [
+      "Tethys",
+      "Titan",
+      "Aegir",
+      "Titan",
+      "Bergelmir",
+      "Bestla",
+      "Calypso",
+      "Daphnis",
+      "Dione",
+      "Enceladus",
+      "Epimetheus",
+      "Fenrir",
+      "Fornjot",
+      "Greip",
+      "Helene",
+      "Hyperion",
+      "Hyrrokkin",
+      "Janus",
+      "Jarnsaxa",
+      "Kari",
+      "Loge",
+      "Mimas",
+      "Pan",
+      "Pandora",
+      "Phoebe",
+      "Prometheus",
+      "Rhea",
+      "Skoll",
+      "Tarqeq",
+      "Tethys",
+      "Titan"
+    ]
+  },
+  {
+    "id": 7,
+    "type": "planet",
+    "name": "Uranus",
+    "latinName": "Uranus",
+    "rotation": 0.7,
+    "circumference": 160590,
+    "temp": {
+      "day": -205,
+      "night": -225
+    },
+    "distance": 2871000000,
+    "orbitalPeriod": 30660,
+    "desc": "Uranus is the seventh planet from the Sun. Uranus is one of the solar system's four gas giants - Jupiter, Saturn, Uranus, and Neptune - and is roughly the same size as Neptune. The planet's diameter is about 50,000 km, and its mass is approximately 14.5 Earth masses.",
+    "moons": [
+      "Titania",
+      "Umbriel",
+      "Miranda",
+      "Oberon",
+      "Ariel",
+      "Desdemona",
+      "Puck"
+    ]
+  },
+  {
+    "id": 8,
+    "type": "planet",
+    "name": "Neptune",
+    "latinName": "Neptunus",
+    "rotation": 0.7,
+    "circumference": 155600,
+    "temp": {
+      "day": -193,
+      "night": -193
+    },
+    "distance": 4495000000,
+    "orbitalPeriod": 60225,
+    "desc": "Neptune is the eighth planet from the Sun. Neptune is a so-called gas giant and is named after the sea god Neptune in Roman mythology. On August 24, 2006, when the International Astronomical Union decided that Pluto was no longer a planet, Neptune became the outermost planet in the solar system.",
+    "moons": [
+      "Triton",
+      "Sao",
+      "Hippocamp",
+      "Proteus",
+      "Despina",
+      "Nereid",
+      "Thalassa",
+      "Galatea",
+      "Neso",
+      "Halimede",
+      "Larissa",
+      "Psamathe",
+      "Naiad",
+      "Laomedeia"
+    ]
+  }
+]

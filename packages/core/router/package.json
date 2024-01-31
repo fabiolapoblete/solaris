@@ -1,0 +1,4 @@
+{
+  "name": "@solaris/router",
+  "main": "./index.ts"
+}
