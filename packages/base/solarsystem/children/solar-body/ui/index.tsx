@@ -39,6 +39,14 @@ export const SolarBody = ({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 3, ease: 'linear' }}
+      whileHover={{
+        scale: 1.1,
+        transition: {
+          type: 'spring',
+          stiffness: 400,
+          damping: 10,
+        },
+      }}
       onClick={onBodyClick}
     >
       <p className='solar-body__name'>{solarObj.name} </p>

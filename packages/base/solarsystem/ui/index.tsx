@@ -20,6 +20,7 @@ export const SolarSystem = () => {
 
   const openModal = (solarObj: SolarDataItem) => {
     setSelectedBody(solarObj);
+    console.log(solarObj);
   };
 
   const closeModal = () => {

@@ -14,6 +14,7 @@ $jupiter-color: #e29468;
 $saturn-color: #c7aa72;
 $uranus-color: #c9d4f1;
 $neptune-color: #7a91a7;
+$border-color: #ffffff33;
 $shadow-color: rgba(0, 0, 0, 0.5);
 
 /* BOX-SHADOW */
@@ -22,6 +23,13 @@ $shadow-large: inset -15px -15px 20px $shadow-color;
 $shadow-medium: inset -10px -10px 15px $shadow-color;
 $shadow-small: inset -5px -5px 10px $shadow-color;
 $shadow-tiny: inset -2px -2px 5px $shadow-color;
+$shadow-sun: inset 0 0 18px #fff, inset 6px 0 18px #ffd700,
+  inset -6px 0 18px #ffcc00, inset 6px 0 30px #ffd700, inset -6px 0 30px #ffcc00,
+  0 0 18px #fff, -4px 0 18px #ffd700, 4px 0 18px #ffcc00,
+  inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+
+/* BORDER */
+$border: 1px solid $border-color;
 
 /* RESPONSIVE */
 $mobileBreakpoint: 30rem;
