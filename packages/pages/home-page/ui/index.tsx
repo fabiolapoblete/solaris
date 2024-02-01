@@ -16,9 +16,7 @@ export const HomePage = () => {
         <h2 className='sub-header'>Solaris</h2>
       </motion.header>
       <main>
-        <section className='home-page__solarsystem'>
-          <SolarSystem />
-        </section>
+        <SolarSystem />
       </main>
     </div>
   );

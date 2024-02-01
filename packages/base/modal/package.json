@@ -1,0 +1,4 @@
+{
+  "name": "@solaris/modal",
+  "main": "./index.ts"
+}

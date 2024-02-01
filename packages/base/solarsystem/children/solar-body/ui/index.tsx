@@ -1,10 +1,17 @@
 import './style.scss';
 
 import { SolarDataItem } from '@solaris/solarsystem';
+import { motion } from 'framer-motion';
 
-export const SolarBody = ({ solarObj }: { solarObj: SolarDataItem }) => {
+export const SolarBody = ({
+  solarObj,
+  onBodyClick,
+}: {
+  solarObj: SolarDataItem;
+  onBodyClick: () => void;
+}) => {
   const calculatePlanetSize = (circumference: number, type: string) => {
-    const baseSize = 300; // Jupiter is the reference size
+    const baseSize = 188; // Jupiter is the reference size
     const baseCircumference = 439264; //Jupiters circumference
     const ratioToJupiter = circumference / baseCircumference;
 
@@ -17,7 +24,7 @@ export const SolarBody = ({ solarObj }: { solarObj: SolarDataItem }) => {
   };
 
   return (
-    <article
+    <motion.article
       className={`solar-body ${solarObj.name}`}
       style={{
         width: `${calculatePlanetSize(
@@ -29,8 +36,12 @@ export const SolarBody = ({ solarObj }: { solarObj: SolarDataItem }) => {
           solarObj.type
         )}px`,
       }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1, duration: 3, ease: 'linear' }}
+      onClick={onBodyClick}
     >
-      <p>{solarObj.name}</p>
-    </article>
+      <p className='solar-body__name'>{solarObj.name} </p>
+    </motion.article>
   );
 };

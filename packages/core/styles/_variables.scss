@@ -3,8 +3,25 @@
 $baseline: 16px;
 
 /* COLORS */
-$textColor: #ffffff;
-$accentColor: #ffd029;
+$text-color: #ffffff;
+$accent-color: #ffd029;
+$sun-color: $accent-color;
+$mercury-color: #888888;
+$venus-color: #e7cdcd;
+$earth-color: #428ed4;
+$mars-color: #ef5f5f;
+$jupiter-color: #e29468;
+$saturn-color: #c7aa72;
+$uranus-color: #c9d4f1;
+$neptune-color: #7a91a7;
+$shadow-color: rgba(0, 0, 0, 0.5);
+
+/* BOX-SHADOW */
+$shadow-huge: inset -25px -25px 40px $shadow-color;
+$shadow-large: inset -15px -15px 20px $shadow-color;
+$shadow-medium: inset -10px -10px 15px $shadow-color;
+$shadow-small: inset -5px -5px 10px $shadow-color;
+$shadow-tiny: inset -2px -2px 5px $shadow-color;
 
 /* RESPONSIVE */
 $mobileBreakpoint: 30rem;
@@ -12,7 +29,7 @@ $tabletBreakpoint: 40rem;
 $desktopBreakpoint: 60rem;
 
 :root {
-  color: $textColor;
+  color: $text-color;
 }
 
 /* TYPOGRAPHY */
@@ -25,7 +42,7 @@ $desktopBreakpoint: 60rem;
 }
 
 @mixin sub-header {
-  color: $accentColor;
+  color: $accent-color;
   font-family: 'Lora', serif;
   font-size: calc($baseline * 1.5);
   font-weight: 400;
