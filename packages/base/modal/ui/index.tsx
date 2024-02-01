@@ -3,27 +3,39 @@ import './style.scss';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SolarDataItem } from '@solaris/solarsystem';
+import {
+  PreviousIcon,
+  ForwardIcon,
+  CloseIcon,
+} from '../../../../public/assets/svgIcons';
 
 export const Modal = ({
   solarObj,
   onClose,
+  onNext,
+  onPrevious,
 }: {
   solarObj: SolarDataItem;
   onClose: () => void;
+  onNext: () => void;
+  onPrevious: () => void;
 }) => {
   return (
     <main className='modal' onClick={onClose}>
-      {/* <header>
-        <button className='modal-close-button' onClick={onClose}>
-          Close
-        </button>
-      </header> */}
       <motion.section
+        className='modal__content'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3, ease: 'easeIn' }}
+        onClick={(e) => e.stopPropagation()}
       >
+        <span className='btn' onClick={onPrevious}>
+          {PreviousIcon}
+        </span>
         <article className='about-body'>
+          <span className='modal__close btn' onClick={onClose}>
+            {CloseIcon}
+          </span>
           <section>
             <h1 className='large-header'>{solarObj.name}</h1>
             <h2 className='sub-header'>{solarObj.latinName}</h2>
@@ -64,12 +76,10 @@ export const Modal = ({
             </section>
           </section>
         </article>
+        <span className='btn' onClick={onNext}>
+          {ForwardIcon}
+        </span>
       </motion.section>
     </main>
   );
 };
-
-{
-  /* <div className='modal-content' onClick={(e) => e.stopPropagation()}>
-</div> */
-}

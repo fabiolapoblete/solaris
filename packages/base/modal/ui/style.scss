@@ -1,7 +1,7 @@
 @use '@solaris/styles' as *;
 
 .modal {
-  background: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+  background: $background-fact;
   height: 100vh;
   width: 100vw;
   position: absolute;
@@ -11,7 +11,20 @@
   justify-content: center;
   align-items: center;
 
+  &__close {
+    position: absolute;
+    top: -2rem;
+    right: 2rem;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 8rem;
+  }
+
   .about-body {
+    position: relative;
     max-width: 640px;
     display: flex;
     flex-direction: column;
@@ -40,7 +53,7 @@
           overflow: hidden;
           white-space: nowrap;
           animation: typing 5s steps(40, end) forwards;
-          animation-delay: 3s;
+          animation-delay: 1.5s;
         }
       }
     }
@@ -52,6 +65,14 @@
         align-items: center;
         gap: 1rem;
       }
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

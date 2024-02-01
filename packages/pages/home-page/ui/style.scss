@@ -1,8 +1,14 @@
 @use '@solaris/styles' as *;
 
 .home-page {
-  background: linear-gradient(-90deg, #0c164d 0%, #190b22 100%);
-  // text-align: end;
-  padding: 2rem;
   height: 100vh;
+  background: $background-home;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  &__header {
+    align-self: flex-end;
+    text-align: end;
+  }
 }

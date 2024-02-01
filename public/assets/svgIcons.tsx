@@ -1,3 +1,36 @@
+export const CloseIcon = (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='30'
+    height='30'
+    viewBox='0 0 30 30'
+    fill='none'
+  >
+    <path
+      d='M16.9887 15L22.5551 9.43359C22.8193 9.16988 22.9679 8.81202 22.9682 8.43874C22.9685 8.06546 22.8205 7.70734 22.5568 7.44316C22.2931 7.17898 21.9353 7.03038 21.562 7.03005C21.1887 7.02972 20.8306 7.17769 20.5664 7.4414L15 13.0078L9.43359 7.4414C9.16941 7.17722 8.81111 7.02881 8.4375 7.02881C8.06389 7.02881 7.70558 7.17722 7.4414 7.4414C7.17722 7.70558 7.02881 8.06389 7.02881 8.4375C7.02881 8.81111 7.17722 9.16941 7.4414 9.43359L13.0078 15L7.4414 20.5664C7.17722 20.8306 7.02881 21.1889 7.02881 21.5625C7.02881 21.9361 7.17722 22.2944 7.4414 22.5586C7.70558 22.8228 8.06389 22.9712 8.4375 22.9712C8.81111 22.9712 9.16941 22.8228 9.43359 22.5586L15 16.9922L20.5664 22.5586C20.8306 22.8228 21.1889 22.9712 21.5625 22.9712C21.9361 22.9712 22.2944 22.8228 22.5586 22.5586C22.8228 22.2944 22.9712 21.9361 22.9712 21.5625C22.9712 21.1889 22.8228 20.8306 22.5586 20.5664L16.9887 15Z'
+      fill='white'
+    />
+  </svg>
+);
+
+export const ForwardIcon = (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='30'
+    height='30'
+    viewBox='0 0 30 30'
+    fill='none'
+  >
+    <path
+      d='M10.7812 6.5625L19.2188 15L10.7812 23.4375'
+      stroke='white'
+      stroke-width='2'
+      stroke-miterlimit='10'
+      stroke-linecap='square'
+    />
+  </svg>
+);
+
 export const PlanetIcon = (
   <svg
     xmlns='http://www.w3.org/2000/svg'
@@ -28,25 +61,7 @@ export const PlanetIcon = (
   </svg>
 );
 
-export const ForwardIcon = (
-  <svg
-    xmlns='http://www.w3.org/2000/svg'
-    width='30'
-    height='30'
-    viewBox='0 0 30 30'
-    fill='none'
-  >
-    <path
-      d='M10.7812 6.5625L19.2188 15L10.7812 23.4375'
-      stroke='white'
-      stroke-width='2'
-      stroke-miterlimit='10'
-      stroke-linecap='square'
-    />
-  </svg>
-);
-
-export const BackIcon = (
+export const PreviousIcon = (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     width='30'

@@ -8,7 +8,7 @@ import { Modal } from '@solaris/modal';
 export const SolarSystem = () => {
   const { fetchSolarData } = useData();
   const [solarData, setSolarData] = useState<SolarDataItem[]>([]);
-  const [selectedBody, setSelectedBody] = useState<SolarDataItem | null>(null);
+  const [selectedBodyIndex, setSelectedBodyIndex] = useState<number>(-1);
 
   useEffect(() => {
     async function getSolarData(): Promise<void> {
@@ -19,12 +19,26 @@ export const SolarSystem = () => {
   }, []);
 
   const openModal = (solarObj: SolarDataItem) => {
-    setSelectedBody(solarObj);
-    console.log(solarObj);
+    const selectedIndex = solarData.findIndex(
+      (item) => item.id === solarObj.id
+    );
+    setSelectedBodyIndex(selectedIndex);
   };
 
   const closeModal = () => {
-    setSelectedBody(null);
+    setSelectedBodyIndex(-1);
+  };
+
+  const handleNext = () => {
+    setSelectedBodyIndex((prevIndex) =>
+      prevIndex === solarData.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const handlePrevious = () => {
+    setSelectedBodyIndex((prevIndex) =>
+      prevIndex === 0 ? solarData.length - 1 : prevIndex - 1
+    );
   };
 
   return (
@@ -37,9 +51,14 @@ export const SolarSystem = () => {
             onBodyClick={() => openModal(solarObj)}
           />
         ))}
-
-      {/* Modal */}
-      {selectedBody && <Modal solarObj={selectedBody} onClose={closeModal} />}
+      {selectedBodyIndex !== -1 && (
+        <Modal
+          solarObj={solarData[selectedBodyIndex]}
+          onClose={closeModal}
+          onNext={handleNext}
+          onPrevious={handlePrevious}
+        />
+      )}
     </section>
   );
 };

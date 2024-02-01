@@ -25,40 +25,48 @@
 
 .Mercury {
   background-color: $mercury-color;
-  box-shadow: $shadow-tiny;
+  box-shadow: $shadow-mercury;
+  // box-shadow: $shadow-tiny;
 }
 
 .Venus {
   background-color: $venus-color;
-  box-shadow: $shadow-small;
+  box-shadow: $shadow-venus;
+  // box-shadow: $shadow-small;
 }
 
 .Earth {
   background-color: $earth-color;
-  box-shadow: $shadow-small;
+  box-shadow: $shadow-earth;
+  // box-shadow: $shadow-small;
 }
 
 .Mars {
   background-color: $mars-color;
-  box-shadow: $shadow-tiny;
+  box-shadow: $shadow-mars;
+  // box-shadow: $shadow-tiny;
 }
 
 .Jupiter {
   background-color: $jupiter-color;
-  box-shadow: $shadow-huge;
+  box-shadow: $shadow-jupiter;
+  // box-shadow: $shadow-huge;
 }
 
 .Saturn {
   background-color: $saturn-color;
-  box-shadow: $shadow-huge;
+  box-shadow: $shadow-saturn;
+  // box-shadow: $shadow-huge;
 }
 
 .Uranus {
   background-color: $uranus-color;
-  box-shadow: $shadow-large;
+  box-shadow: $shadow-uranus;
+  // box-shadow: $shadow-large;
 }
 
 .Neptune {
   background-color: $neptune-color;
-  box-shadow: $shadow-medium;
+  box-shadow: $shadow-neptune;
+  // box-shadow: $shadow-medium;
 }

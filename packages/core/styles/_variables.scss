@@ -17,6 +17,10 @@ $neptune-color: #7a91a7;
 $border-color: #ffffff33;
 $shadow-color: rgba(0, 0, 0, 0.5);
 
+/* BACKGROUND COLORS */
+$background-home: linear-gradient(-90deg, #0c164d 0%, #190b22 100%);
+$background-fact: linear-gradient(90deg, #0c164d 0%, #190b22 100%);
+
 /* BOX-SHADOW */
 $shadow-huge: inset -25px -25px 40px $shadow-color;
 $shadow-large: inset -15px -15px 20px $shadow-color;
@@ -25,8 +29,31 @@ $shadow-small: inset -5px -5px 10px $shadow-color;
 $shadow-tiny: inset -2px -2px 5px $shadow-color;
 $shadow-sun: inset 0 0 18px #fff, inset 6px 0 18px #ffd700,
   inset -6px 0 18px #ffcc00, inset 6px 0 30px #ffd700, inset -6px 0 30px #ffcc00,
-  0 0 18px #fff, -4px 0 18px #ffd700, 4px 0 18px #ffcc00,
-  inset -25px -25px 40px rgba(0, 0, 0, 0.5);
+  0 0 18px #fff, -4px 0 18px #ffd700, 4px 0 18px #ffcc00, $shadow-huge;
+$shadow-mercury: inset 0 0 5px #ffffff, inset 2px 0 5px #888888,
+  inset -2px 0 5px #666666, inset 2px 0 8px #888888, inset -2px 0 8px #666666,
+  0 0 5px #ffffff, -2px 0 5px #888888, 2px 0 5px #666666, $shadow-medium;
+$shadow-venus: inset 0 0 10px #ffffff, inset 4px 0 10px #e7cdcd,
+  inset -4px 0 10px #d4b1b1, inset 4px 0 15px #e7cdcd, inset -4px 0 15px #d4b1b1,
+  0 0 10px #ffffff, -2px 0 10px #e7cdcd, 2px 0 10px #d4b1b1, $shadow-large;
+$shadow-earth: inset 0 0 10px #ffffff, inset 4px 0 10px #428ed4,
+  inset -4px 0 10px #2e6a9a, inset 4px 0 15px #428ed4, inset -4px 0 15px #2e6a9a,
+  0 0 10px #ffffff, -2px 0 10px #428ed4, 2px 0 10px #2e6a9a, $shadow-large;
+$shadow-mars: inset 0 0 10px #ffffff, inset 4px 0 10px #ef5f5f,
+  inset -4px 0 10px #c44545, inset 4px 0 15px #ef5f5f, inset -4px 0 15px #c44545,
+  0 0 10px #ffffff, -2px 0 10px #ef5f5f, 2px 0 10px #c44545, $shadow-large;
+$shadow-jupiter: inset 0 0 10px #ffffff, inset 6px 0 10px #e29468,
+  inset -6px 0 10px #c98156, inset 6px 0 15px #e29468, inset -6px 0 15px #c98156,
+  0 0 10px #ffffff, -4px 0 10px #e29468, 4px 0 10px #c98156, $shadow-large;
+$shadow-saturn: inset 0 0 10px #ffffff, inset 6px 0 10px #c7aa72,
+  inset -6px 0 10px #a68755, inset 6px 0 15px #c7aa72, inset -6px 0 15px #a68755,
+  0 0 10px #ffffff, -4px 0 10px #c7aa72, 4px 0 10px #a68755, $shadow-huge;
+$shadow-uranus: inset 0 0 10px #ffffff, inset 6px 0 10px #c9d4f1,
+  inset -6px 0 10px #a5b8d6, inset 6px 0 15px #c9d4f1, inset -6px 0 15px #a5b8d6,
+  0 0 10px #ffffff, -4px 0 10px #c9d4f1, 4px 0 10px #a5b8d6, $shadow-large;
+$shadow-neptune: inset 0 0 10px #ffffff, inset 6px 0 10px #7a91a7,
+  inset -6px 0 10px #5c7385, inset 6px 0 15px #7a91a7, inset -6px 0 15px #5c7385,
+  0 0 10px #ffffff, -4px 0 10px #7a91a7, 4px 0 10px #5c7385, $shadow-large;
 
 /* BORDER */
 $border: 1px solid $border-color;
