@@ -4,6 +4,9 @@
   @include reset;
 }
 body {
+  background: $background-home;
+  height: 100vh;
+  min-width: 100vw;
   scroll-behavior: smooth;
 
   .App {

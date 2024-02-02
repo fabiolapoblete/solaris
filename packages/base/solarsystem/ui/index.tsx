@@ -1,6 +1,6 @@
 import './style.scss';
-
 import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 import { useData, SolarDataItem } from '@solaris/solarsystem';
 import { SolarBody } from '@solaris/solar-body';
 import { Modal } from '@solaris/modal';
@@ -14,18 +14,12 @@ export const SolarSystem = ({ input }: { input: string }) => {
     async function getSolarData(): Promise<void> {
       const data: SolarDataItem[] = await fetchSolarData();
 
-      const filteredData = data.filter((object) => {
-        const includesInput = object.name
-          .toLowerCase()
-          .includes(input.toLowerCase());
-        return includesInput;
-      });
+      const filteredData = data?.map((solarObject) => ({
+        ...solarObject,
+        isVisible: solarObject.name.toLowerCase().includes(input.toLowerCase()),
+      }));
 
-      if (input === '') {
-        setSolarData(data);
-      } else {
-        setSolarData(filteredData);
-      }
+      setSolarData(filteredData);
     }
     getSolarData();
   }, [input]);
@@ -54,23 +48,33 @@ export const SolarSystem = ({ input }: { input: string }) => {
   };
 
   return (
-    <section className='solar-system'>
-      {solarData &&
-        solarData.map((solarObj) => (
-          <SolarBody
-            key={solarObj.id}
-            solarObj={solarObj}
-            onBodyClick={() => openModal(solarObj)}
-          />
-        ))}
-      {selectedBodyIndex !== -1 && (
+    <motion.section
+      className='solar-system'
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1, duration: 3, ease: 'linear' }}
+    >
+      {selectedBodyIndex !== -1 ? (
         <Modal
           solarObj={solarData[selectedBodyIndex]}
           onClose={closeModal}
           onNext={handleNext}
           onPrevious={handlePrevious}
         />
+      ) : (
+        solarData &&
+        solarData.map((solarObj) => (
+          <div
+            key={solarObj.id}
+            className={solarObj.isVisible ? ' ' : 'hidden'}
+          >
+            <SolarBody
+              solarObj={solarObj}
+              onBodyClick={() => openModal(solarObj)}
+            />
+          </div>
+        ))
       )}
-    </section>
+    </motion.section>
   );
 };

@@ -1,21 +1,13 @@
 @use '@solaris/styles' as *;
 
 .modal {
+  @include flex-center;
   background: $background-fact;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   position: absolute;
   top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &__close {
-    position: absolute;
-    top: -2rem;
-    right: 2rem;
-  }
+  right: 0;
 
   &__content {
     display: flex;
@@ -23,12 +15,17 @@
     gap: 8rem;
   }
 
+  &__close {
+    position: absolute;
+    top: -2rem;
+    right: 2rem;
+  }
+
   .about-body {
-    position: relative;
-    max-width: 640px;
-    display: flex;
-    flex-direction: column;
+    @include flex-column;
     gap: 2rem;
+    position: relative;
+    max-width: 40rem;
 
     &__desc {
       margin-top: 1rem;
@@ -42,13 +39,11 @@
       border-bottom: $border;
 
       &--section {
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         gap: 1rem;
 
         h3 {
-          display: flex;
-          flex-direction: column;
+          @include flex-column;
           width: 0;
           overflow: hidden;
           white-space: nowrap;
@@ -60,8 +55,7 @@
 
     &__moons {
       &--moons {
-        display: flex;
-        flex-wrap: wrap;
+        @include flex-wrap;
         align-items: center;
         gap: 1rem;
       }

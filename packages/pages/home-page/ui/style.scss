@@ -1,11 +1,20 @@
 @use '@solaris/styles' as *;
 
 .home-page {
-  height: 100vh;
-  background: $background-home;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
+  position: relative;
   padding: 2rem;
+
+  &__searchbar {
+    display: flex;
+    gap: 1rem;
+
+    input {
+      border: none;
+      border-radius: 5px;
+      padding-left: 0.5rem;
+    }
+  }
 
   &__header {
     align-self: flex-end;

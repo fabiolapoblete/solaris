@@ -109,8 +109,18 @@ $desktopBreakpoint: 60rem;
   text-decoration: none;
 }
 
-@mixin flex-column-2 {
+@mixin flex-column {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
 }

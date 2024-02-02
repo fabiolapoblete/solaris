@@ -1,72 +1,62 @@
 @use '@solaris/styles' as *;
 
 .solar-body {
-  border-radius: 50%;
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: -120px 70px 0 0;
+  border-radius: 50%;
   cursor: pointer;
 
   &__name {
-    rotate: -45deg;
     position: absolute;
-    top: -50px;
+    top: -3rem;
+    rotate: -45deg;
   }
 }
 
 .Sun {
   background-color: $sun-color;
   box-shadow: $shadow-huge;
-  margin-left: -800px;
+  margin-left: -50rem;
   box-shadow: $shadow-sun;
 }
 
 .Mercury {
   background-color: $mercury-color;
   box-shadow: $shadow-mercury;
-  // box-shadow: $shadow-tiny;
 }
 
 .Venus {
   background-color: $venus-color;
   box-shadow: $shadow-venus;
-  // box-shadow: $shadow-small;
 }
 
 .Earth {
   background-color: $earth-color;
   box-shadow: $shadow-earth;
-  // box-shadow: $shadow-small;
 }
 
 .Mars {
   background-color: $mars-color;
   box-shadow: $shadow-mars;
-  // box-shadow: $shadow-tiny;
 }
 
 .Jupiter {
   background-color: $jupiter-color;
   box-shadow: $shadow-jupiter;
-  // box-shadow: $shadow-huge;
 }
 
 .Saturn {
   background-color: $saturn-color;
   box-shadow: $shadow-saturn;
-  // box-shadow: $shadow-huge;
 }
 
 .Uranus {
   background-color: $uranus-color;
   box-shadow: $shadow-uranus;
-  // box-shadow: $shadow-large;
 }
 
 .Neptune {
   background-color: $neptune-color;
   box-shadow: $shadow-neptune;
-  // box-shadow: $shadow-medium;
 }

@@ -1,5 +1,4 @@
 import './style.scss';
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SolarDataItem } from '@solaris/solarsystem';
@@ -21,13 +20,18 @@ export const Modal = ({
   onPrevious: () => void;
 }) => {
   return (
-    <main className='modal' onClick={onClose}>
-      <motion.section
-        className='modal__content'
+    <motion.section
+      className='modal'
+      onClick={(e) => {
+        e.stopPropagation();
+        onClose;
+      }}
+    >
+      <motion.article
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 3, ease: 'easeIn' }}
-        onClick={(e) => e.stopPropagation()}
+        className='modal__content'
       >
         <span className='btn' onClick={onPrevious}>
           {PreviousIcon}
@@ -79,7 +83,7 @@ export const Modal = ({
         <span className='btn' onClick={onNext}>
           {ForwardIcon}
         </span>
-      </motion.section>
-    </main>
+      </motion.article>
+    </motion.section>
   );
 };

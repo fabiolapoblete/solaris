@@ -1,5 +1,4 @@
 import './style.scss';
-
 import { SolarDataItem } from '@solaris/solarsystem';
 import { motion } from 'framer-motion';
 
@@ -36,14 +35,11 @@ export const SolarBody = ({
           solarObj.type
         )}px`,
       }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1, duration: 3, ease: 'linear' }}
       whileHover={{
-        scale: 1.1,
+        scale: 1.08,
         transition: {
           type: 'spring',
-          stiffness: 400,
+          stiffness: 300,
           damping: 10,
         },
       }}

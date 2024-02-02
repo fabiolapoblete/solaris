@@ -13,6 +13,7 @@ export type SolarDataItem = {
   orbitalPeriod: number;
   desc: string;
   moons: string[];
+  isVisible?: boolean;
 };
 
 export const useData = () => {

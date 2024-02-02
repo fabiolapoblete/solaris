@@ -1,5 +1,12 @@
+@use '@solaris/styles' as *;
+
 .solar-system {
-  display: flex;
+  @include flex-wrap;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
+
+  .hidden {
+    visibility: hidden;
+  }
 }
