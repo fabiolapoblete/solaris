@@ -5,7 +5,7 @@ import { useData, SolarDataItem } from '@solaris/solarsystem';
 import { SolarBody } from '@solaris/solar-body';
 import { Modal } from '@solaris/modal';
 
-export const SolarSystem = () => {
+export const SolarSystem = ({ input }: { input: string }) => {
   const { fetchSolarData } = useData();
   const [solarData, setSolarData] = useState<SolarDataItem[]>([]);
   const [selectedBodyIndex, setSelectedBodyIndex] = useState<number>(-1);
@@ -13,10 +13,22 @@ export const SolarSystem = () => {
   useEffect(() => {
     async function getSolarData(): Promise<void> {
       const data: SolarDataItem[] = await fetchSolarData();
-      setSolarData(data);
+
+      const filteredData = data.filter((object) => {
+        const includesInput = object.name
+          .toLowerCase()
+          .includes(input.toLowerCase());
+        return includesInput;
+      });
+
+      if (input === '') {
+        setSolarData(data);
+      } else {
+        setSolarData(filteredData);
+      }
     }
     getSolarData();
-  }, []);
+  }, [input]);
 
   const openModal = (solarObj: SolarDataItem) => {
     const selectedIndex = solarData.findIndex(
@@ -25,18 +37,18 @@ export const SolarSystem = () => {
     setSelectedBodyIndex(selectedIndex);
   };
 
-  const closeModal = () => {
+  const closeModal = (): void => {
     setSelectedBodyIndex(-1);
   };
 
-  const handleNext = () => {
+  const handleNext = (): void => {
     setSelectedBodyIndex((prevIndex) =>
       prevIndex === solarData.length - 1 ? 0 : prevIndex + 1
     );
   };
 
-  const handlePrevious = () => {
-    setSelectedBodyIndex((prevIndex) =>
+  const handlePrevious = (): void => {
+    setSelectedBodyIndex((prevIndex: number) =>
       prevIndex === 0 ? solarData.length - 1 : prevIndex - 1
     );
   };
