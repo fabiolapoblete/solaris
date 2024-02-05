@@ -8,7 +8,7 @@ Works best on desktop at the moment.
 ```
 https://fabiolapoblete.github.io/solaris/data.json
 ```
-## Web APP
+## WEB APP
 https://solaris-six.vercel.app/    
 
 
